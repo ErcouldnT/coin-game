@@ -1,0 +1,114 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-374234f9.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-e6af642f.js",
+      "_singletons-4439d2b4.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/login.svelte",
+      "src/routes/signout.svelte",
+      "src/routes/signup.svelte",
+      "src/routes/wallet.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-0bcf441a.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e6af642f.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-db91d96d.css"
+    ],
+    "assets": [
+      "assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
+      "assets/fira-mono-all-400-normal-1e3b098c.woff",
+      "assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
+      "assets/fira-mono-greek-ext-400-normal-9e2fe623.woff2",
+      "assets/fira-mono-greek-400-normal-a8be01ce.woff2",
+      "assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
+      "assets/fira-mono-latin-400-normal-e43b3538.woff2"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-cb4d7eb5.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e6af642f.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-03d8c588.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e6af642f.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-80770fe5.css"
+    ]
+  },
+  "src/routes/login.svelte": {
+    "file": "pages/login.svelte-23e0366d.js",
+    "src": "src/routes/login.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e6af642f.js"
+    ]
+  },
+  "src/routes/signout.svelte": {
+    "file": "pages/signout.svelte-3a9e3d52.js",
+    "src": "src/routes/signout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e6af642f.js",
+      "_navigation-98e433f2.js",
+      "_singletons-4439d2b4.js"
+    ]
+  },
+  "src/routes/signup.svelte": {
+    "file": "pages/signup.svelte-18a21420.js",
+    "src": "src/routes/signup.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e6af642f.js",
+      "_navigation-98e433f2.js",
+      "_singletons-4439d2b4.js"
+    ]
+  },
+  "src/routes/wallet.svelte": {
+    "file": "pages/wallet.svelte-7a236719.js",
+    "src": "src/routes/wallet.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-e6af642f.js"
+    ]
+  },
+  "_index-e6af642f.js": {
+    "file": "chunks/index-e6af642f.js"
+  },
+  "_singletons-4439d2b4.js": {
+    "file": "chunks/singletons-4439d2b4.js"
+  },
+  "_navigation-98e433f2.js": {
+    "file": "chunks/navigation-98e433f2.js",
+    "imports": [
+      "_singletons-4439d2b4.js"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ],
+    "dynamicImports": [
+      "src/hooks.js"
+    ]
+  },
+  "src/routes/auth/signout.js": {
+    "file": "entries/endpoints/auth/signout.js",
+    "src": "src/routes/auth/signout.js",
+    "isEntry": true
+  },
+  "src/routes/auth/register.js": {
+    "file": "entries/endpoints/auth/register.js",
+    "src": "src/routes/auth/register.js",
+    "isEntry": true
+  },
+  "src/routes/auth/login.js": {
+    "file": "entries/endpoints/auth/login.js",
+    "src": "src/routes/auth/login.js",
+    "isEntry": true
+  },
+  "src/routes/auth/exchange.js": {
+    "file": "entries/endpoints/auth/exchange.js",
+    "src": "src/routes/auth/exchange.js",
+    "isEntry": true
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ],
+    "css": [
+      "assets/entries/pages/__layout.svelte-7b86e6e5.css"
+    ],
+    "assets": [
+      "assets/fira-mono-cyrillic-ext-400-normal-3df7909e.woff2",
+      "assets/fira-mono-all-400-normal-1e3b098c.woff",
+      "assets/fira-mono-cyrillic-400-normal-c7d433fd.woff2",
+      "assets/fira-mono-greek-ext-400-normal-9e2fe623.woff2",
+      "assets/fira-mono-greek-400-normal-a8be01ce.woff2",
+      "assets/fira-mono-latin-ext-400-normal-6bfabd30.woff2",
+      "assets/fira-mono-latin-400-normal-e43b3538.woff2"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ],
+    "css": [
+      "assets/entries/pages/index.svelte-86dda940.css"
+    ]
+  },
+  "src/routes/login.svelte": {
+    "file": "entries/pages/login.svelte.js",
+    "src": "src/routes/login.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ]
+  },
+  "src/routes/signout.svelte": {
+    "file": "entries/pages/signout.svelte.js",
+    "src": "src/routes/signout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ]
+  },
+  "src/routes/signup.svelte": {
+    "file": "entries/pages/signup.svelte.js",
+    "src": "src/routes/signup.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ]
+  },
+  "src/routes/wallet.svelte": {
+    "file": "entries/pages/wallet.svelte.js",
+    "src": "src/routes/wallet.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1259f1f6.js"
+    ]
+  },
+  "_index-1259f1f6.js": {
+    "file": "chunks/index-1259f1f6.js"
+  },
+  "src/hooks.js": {
+    "file": "chunks/hooks-6db99fc3.js",
+    "src": "src/hooks.js",
+    "isDynamicEntry": true
+  }
+}
