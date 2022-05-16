@@ -1,5 +1,7 @@
 import * as cookie from "cookie";
-const get = async ({ request }) => {
+const get = async ({
+  request
+}) => {
   const headers = {
     "Set-Cookie": cookie.serialize("userid", "", {
       path: "/",

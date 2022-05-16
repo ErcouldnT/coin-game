@@ -1,4 +1,6 @@
-const post = async ({ request }) => {
+const post = async ({
+  request
+}) => {
   const URL = "http://localhost:3001/api/v1/user/exchange";
   const res = await fetch(URL, {
     method: "POST",

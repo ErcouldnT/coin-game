@@ -1,9 +1,7 @@
 import * as cookie from "cookie";
 
 export const post = async ({ request }) => {
-  const URL = import.meta.env.DEV 
-    ? 'http://localhost:3001/api/v1/user/login'
-    : '/api/v1/user/login';
+  const URL = '/api/v1/user/login';
   const res = await fetch(URL, {
     method: 'POST',
     headers: {

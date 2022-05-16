@@ -1,11 +1,11 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-d874cf42.js",
+    "file": "start-374234f9.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-e6af642f.js",
-      "_singletons-d1fb5791.js"
+      "_singletons-4439d2b4.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -18,7 +18,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-e8254100.js",
+    "file": "pages/__layout.svelte-0bcf441a.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -39,7 +39,7 @@
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-31afeaaf.js",
+    "file": "error.svelte-cb4d7eb5.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -48,7 +48,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-382d3993.js",
+    "file": "pages/index.svelte-03d8c588.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -60,7 +60,7 @@
     ]
   },
   "src/routes/login.svelte": {
-    "file": "pages/login.svelte-47416724.js",
+    "file": "pages/login.svelte-23e0366d.js",
     "src": "src/routes/login.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -69,29 +69,29 @@
     ]
   },
   "src/routes/signout.svelte": {
-    "file": "pages/signout.svelte-5237af69.js",
+    "file": "pages/signout.svelte-3a9e3d52.js",
     "src": "src/routes/signout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-e6af642f.js",
-      "_navigation-0e6511d1.js",
-      "_singletons-d1fb5791.js"
+      "_navigation-98e433f2.js",
+      "_singletons-4439d2b4.js"
     ]
   },
   "src/routes/signup.svelte": {
-    "file": "pages/signup.svelte-8010c8a5.js",
+    "file": "pages/signup.svelte-18a21420.js",
     "src": "src/routes/signup.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-e6af642f.js",
-      "_navigation-0e6511d1.js",
-      "_singletons-d1fb5791.js"
+      "_navigation-98e433f2.js",
+      "_singletons-4439d2b4.js"
     ]
   },
   "src/routes/wallet.svelte": {
-    "file": "pages/wallet.svelte-d8605c03.js",
+    "file": "pages/wallet.svelte-7a236719.js",
     "src": "src/routes/wallet.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -102,13 +102,13 @@
   "_index-e6af642f.js": {
     "file": "chunks/index-e6af642f.js"
   },
-  "_singletons-d1fb5791.js": {
-    "file": "chunks/singletons-d1fb5791.js"
+  "_singletons-4439d2b4.js": {
+    "file": "chunks/singletons-4439d2b4.js"
   },
-  "_navigation-0e6511d1.js": {
-    "file": "chunks/navigation-0e6511d1.js",
+  "_navigation-98e433f2.js": {
+    "file": "chunks/navigation-98e433f2.js",
     "imports": [
-      "_singletons-d1fb5791.js"
+      "_singletons-4439d2b4.js"
     ]
   }
 }

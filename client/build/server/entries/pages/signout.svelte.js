@@ -1,12 +1,23 @@
 import { c as create_ssr_component, e as escape } from "../../chunks/index-1259f1f6.js";
-async function load({ session }) {
+async function load({
+  session
+}) {
   if (!session.user) {
-    return { status: 302, redirect: "/" };
+    return {
+      status: 302,
+      redirect: "/"
+    };
   }
-  return { props: { user: session.user } };
+  return {
+    props: {
+      user: session.user
+    }
+  };
 }
 const Signout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { user } = $$props;
+  let {
+    user
+  } = $$props;
   if ($$props.user === void 0 && $$bindings.user && user !== void 0)
     $$bindings.user(user);
   return `${$$result.head += `${$$result.title = `<title>\xC7\u0131k\u0131\u015F</title>`, ""}`, ""}
