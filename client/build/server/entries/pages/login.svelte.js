@@ -1,18 +1,10 @@
 import { c as create_ssr_component, a as add_attribute } from "../../chunks/index-1259f1f6.js";
-async function load({
-  session
-}) {
+async function load({ session }) {
+  console.log(session);
   if (session.user) {
-    return {
-      status: 302,
-      redirect: "/"
-    };
+    return { status: 302, redirect: "/" };
   }
-  return {
-    props: {
-      user: session.user
-    }
-  };
+  return { props: { user: session.user } };
 }
 const Login = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let username = "";

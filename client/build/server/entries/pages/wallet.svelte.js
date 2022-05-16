@@ -1,25 +1,14 @@
 import { c as create_ssr_component, b as each, e as escape, a as add_attribute } from "../../chunks/index-1259f1f6.js";
 import moment from "moment";
-async function load({
-  session
-}) {
+async function load({ session }) {
   if (!session.user) {
-    return {
-      status: 302,
-      redirect: "/login"
-    };
+    return { status: 302, redirect: "/login" };
   }
-  return {
-    props: {
-      user: session.user
-    }
-  };
+  return { props: { user: session.user } };
 }
 const Wallet = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let searchedCoins;
-  let {
-    user
-  } = $$props;
+  let { user } = $$props;
   let fromThisCoin = "";
   let thisAmount = "";
   let toThisCoin = "";

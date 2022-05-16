@@ -3,7 +3,7 @@ export const manifest = {
 	assets: new Set(["favicon.png","robots.txt","svelte-welcome.png","svelte-welcome.webp"]),
 	mimeTypes: {".png":"image/png",".txt":"text/plain",".webp":"image/webp"},
 	_: {
-		entry: {"file":"start-374234f9.js","js":["start-374234f9.js","chunks/index-e6af642f.js","chunks/singletons-4439d2b4.js"],"css":[]},
+		entry: {"file":"start-d874cf42.js","js":["start-d874cf42.js","chunks/index-e6af642f.js","chunks/singletons-d1fb5791.js"],"css":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

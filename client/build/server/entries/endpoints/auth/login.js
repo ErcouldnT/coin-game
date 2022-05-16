@@ -1,7 +1,5 @@
 import * as cookie from "cookie";
-const post = async ({
-  request
-}) => {
+const post = async ({ request }) => {
   const URL = "http://localhost:3001/api/v1/user/login";
   const res = await fetch(URL, {
     method: "POST",

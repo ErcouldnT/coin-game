@@ -4,19 +4,12 @@ const css = {
   code: "section.s-Uap-jPRb-uiE.s-Uap-jPRb-uiE{display:flex;flex-direction:column;justify-content:center;align-items:center;flex:1}h1.s-Uap-jPRb-uiE.s-Uap-jPRb-uiE{width:100%}.welcome.s-Uap-jPRb-uiE.s-Uap-jPRb-uiE{position:relative;width:100%;height:0;padding:0 0 calc(100% * 495 / 2048) 0}.welcome.s-Uap-jPRb-uiE img.s-Uap-jPRb-uiE{position:absolute;width:100%;height:100%;top:0;display:block}.s-Uap-jPRb-uiE.s-Uap-jPRb-uiE{}",
   map: null
 };
-async function load({
-  session
-}) {
-  return {
-    props: {
-      user: session.user
-    }
-  };
+async function load({ session }) {
+  return { props: { user: session.user } };
 }
 const Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let {
-    user
-  } = $$props;
+  let { user } = $$props;
+  console.log(user);
   if ($$props.user === void 0 && $$bindings.user && user !== void 0)
     $$bindings.user(user);
   $$result.css.add(css);

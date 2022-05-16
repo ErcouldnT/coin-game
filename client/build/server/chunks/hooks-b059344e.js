@@ -1,9 +1,7 @@
 import * as cookie from "cookie";
 import "dotenv/config";
 import mongoose from "mongoose";
-const {
-  Schema
-} = mongoose;
+const { Schema } = mongoose;
 const coinSchema = new Schema({
   name: {
     type: String,
@@ -14,9 +12,7 @@ const coinSchema = new Schema({
     required: true,
     min: 0
   }
-}, {
-  timestamps: true
-});
+}, { timestamps: true });
 const userSchema = new Schema({
   username: {
     type: String,
@@ -34,23 +30,20 @@ const userSchema = new Schema({
       name: "USD"
     }]
   }
-}, {
-  timestamps: true
-});
+}, { timestamps: true });
 var User = mongoose.models.User || mongoose.model("User", userSchema);
 mongoose.connect(process.env.MONGO_URI, (error) => {
+  console.log(error ? `Mongo failed: ${error.message}` : "Mongo connected!");
 });
 const finder = async (userid) => {
   try {
     const user = await User.findById(userid);
     return user;
   } catch (error) {
+    console.log(error);
   }
 };
-const handle = async ({
-  event,
-  resolve
-}) => {
+const handle = async ({ event, resolve }) => {
   const cookies = cookie.parse(event.request.headers.get("cookie") || "");
   event.locals.userid = cookies["userid"] || null;
   try {
@@ -69,6 +62,7 @@ const handle = async ({
       }
     }
   } catch (error) {
+    console.log(error);
   }
   var response = await resolve(event);
   return response;
