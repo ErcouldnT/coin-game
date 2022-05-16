@@ -37,7 +37,7 @@ const userSchema = new Schema({
 }, {
   timestamps: true
 });
-var User = mongoose.model("User", userSchema);
+var User = mongoose.models.User || mongoose.model("User", userSchema);
 mongoose.connect(process.env.MONGO_URI, (error) => {
 });
 const finder = async (userid) => {
