@@ -21,7 +21,7 @@ export const post = async ({ params, request }) => {
         maxAge: 60 * 60 * 24 * 7,
         sameSite: "strict",
         path: "/",
-        secure: process.env.NODE_ENV === 'production'
+        secure: true
       }),
       // location: `/wallet`
     };
