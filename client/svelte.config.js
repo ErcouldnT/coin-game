@@ -7,7 +7,7 @@ const config = {
   kit: {
     adapter: adapter(),
     vite: {
-      plugins: [removeConsole()],
+      // plugins: [removeConsole()],
     }
   },
   preprocess: [

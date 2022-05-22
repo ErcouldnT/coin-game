@@ -12,24 +12,28 @@ export const post = async ({ request }) => {
 
   if (res.status === 200) {
     const data = await res.json();
-    const headers = {
-      "Set-Cookie": cookie.serialize("userid", data.user._id, {
-        httpOnly: true,
-        maxAge: 60 * 60 * 24 * 7,
-        sameSite: "strict",
-        path: "/",
-        secure: true
-      }),
-      // location: `/wallet`
-    };
+    try {
+      const headers = {
+        "Set-Cookie": cookie.serialize("userid", data.user._id, {
+          httpOnly: true,
+          maxAge: 60 * 60 * 24 * 7,
+          // sameSite: "strict",
+          path: "/",
+          // secure: true
+        }),
+        // location: `/wallet`
+      };
 
-    return {
-      status: 200,
-      headers,
-      body: {
-        success: true,
-        message: 'Success'
-      },
+      return {
+        status: 200,
+        headers,
+        body: {
+          success: true,
+          message: 'Success'
+        },
+      };
+    } catch (error) {
+      console.log(error.message);
     };
   };
 
