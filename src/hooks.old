@@ -1,0 +1,34 @@
+import * as cookie from "cookie";
+import { db } from '$lib/db';
+import User from "$lib/models/User";
+
+export const handle = async ({ event, resolve }) => {
+  const cookies = cookie.parse(event.request.headers.get("cookie") || "");
+  event.locals.user = cookies;
+
+  const user = await User.findById(cookies.userid);
+
+  if (user) {
+    event.locals.user.id = user._id;
+    event.locals.user.name = user.name;
+    event.locals.user.authenticated = true;
+  } else {
+    event.locals.user.authenticated = false;
+  }
+
+  const response = await resolve(event);
+
+  return response;
+};
+
+export const getSession = async (event) => {
+  return event.locals.user
+    ? {
+        user: {
+          id: event.locals.user.id,
+          name: event.locals.user.name,
+          authenticated: event.locals.user.authenticated,
+        },
+      }
+    : {};
+};
