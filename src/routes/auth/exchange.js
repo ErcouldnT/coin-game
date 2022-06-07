@@ -1,4 +1,4 @@
-import { db } from "$lib/db";
+// import { db } from "$lib/db";
 import User from "$lib/models/User";
 import { currencyToCoin, coinToCoin } from "$lib/modules";
 

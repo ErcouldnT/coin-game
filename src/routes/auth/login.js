@@ -1,5 +1,5 @@
 import * as cookie from "cookie";
-import { db } from "$lib/db";
+// import { db } from "$lib/db";
 import User from "$lib/models/User";
 
 export const post = async ({ locals, params, request }) => {
