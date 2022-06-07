@@ -11,7 +11,10 @@ const coinSchema = new Schema({
     type: Number,
     required: true,
     min: 0
-  }
+  },
+  id: String,
+  symbol: String,
+  isCurrency: Boolean,
 }, { timestamps: true });
 
 const userSchema = new Schema({
@@ -28,9 +31,12 @@ const userSchema = new Schema({
     type: [coinSchema],
     default: [{
       amount: 1000,
-      name: 'USD'
-    }]
-  }
+      name: 'USD',
+      isCurrency: true,
+      // id,
+      // symbol,
+    }],
+  },
 }, { timestamps: true });
 
 export default mongoose.model('User', userSchema);

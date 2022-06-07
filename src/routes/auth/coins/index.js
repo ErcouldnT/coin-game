@@ -1,6 +1,6 @@
 import { CoinGeckoClient } from "$lib/modules";
 
-let coinsCache = {};
+var coinsCache = {};
 
 export const get = async ({ locals, params, request }) => {
   // 1 hour cache

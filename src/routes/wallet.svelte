@@ -25,6 +25,8 @@
 <script>
   export let user;
 
+  let total = 0;
+
   import { onMount } from 'svelte';
   import moment from 'moment';
 
@@ -63,6 +65,8 @@
     const resCoins = await fetch(allCoinsURL);
     allCoins = await resCoins.json();
     // console.log(allCoins);
+
+    await getTotalValue();
   });
 
   const coinExchange = async () => {
@@ -89,12 +93,35 @@
     thisAmount = '';
     toThisCoin = '';
   };
+
+  const getTotalValue = async () => {
+    const URL = '/auth/total';
+    const res = await fetch(URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(user.wallet),
+    });
+
+    const data = await res.json();
+    total = data.total.toFixed(0);
+    // console.log(total);
+    return total;
+  };
+
+  const updateTotal = async () => {
+    total = 0;
+    await getTotalValue();
+  };
 </script>
 
 <section>
   <div class="text-center p-5 flex flex-col items-center">
     <div class="text-center">
-      <button class="bg-blue-600 text-white rounded-full p-3 m-5">Cüzdan değeri hesapla</button>
+      <button on:click={updateTotal} class="bg-blue-600 text-white rounded-full p-3 m-5">
+        Cüzdan değeri{total === 0 ? " hesaplanıyor..." : `: ~${total} USD`}
+      </button>
     </div>
     <div>
       <table class="table-auto">
@@ -128,7 +155,7 @@
     </p>
     <form action="">
       <div class="mb-5">
-        <input bind:value={fromThisCoin} class="p-2 rounded-xl" type="text" placeholder="Cüzdandan seç">
+        <input bind:value={fromThisCoin} class="p-2 rounded-xl" type="text" placeholder="Cüzdandan tıkla">
         <input bind:value={thisAmount} class="p-2 rounded-xl" type="text" 
           placeholder="Satış miktarı">
         <input bind:value={toThisCoin} class="p-2 rounded-xl" type="text" placeholder="Coin al">
@@ -137,15 +164,15 @@
     </form>
     {#if toThisCoin}
       {#each searchedCoins.slice(0, 100) as coin}
-        <p on:click={() => {toThisCoin = coin.name}} class="cursor-pointer">{coin.name}</p>
+        <p on:click={() => {toThisCoin = coin.id}} class="cursor-pointer">{coin.name}</p>
       {/each}
     {/if}
-    {#if !toThisCoin && fromThisCoin}
+    {#if !toThisCoin && fromThisCoin && searchedWallet.length > 1}
       {#each searchedWallet.slice(0, 100) as coin}
-        <p on:click={() => {fromThisCoin = coin.name}} class="text-orange-500 cursor-pointer">({coin.name}) satılacak</p>
+        <!-- todo: Cüzdandaki coin'lerin id'leri yok! -->
+        <p on:click={() => {fromThisCoin = coin.id}} class="text-orange-500 cursor-pointer">({coin.name.toUpperCase()}) satmak için tıkla</p>
       {/each}
     {/if}
   </div>
-
 </section>
 
